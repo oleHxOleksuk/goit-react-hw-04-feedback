@@ -5,16 +5,16 @@ import styles from './feedbackOptions.module.scss';
 const FeedbackOptions = ({ onLeaveFeedback, options }) => {
   return (
     <div className={styles.optionsWrapper}>
-      {options.map(type => {
+      {options.map(option => {
         return (
           <button
-            key={type}
+            key={option}
             type="button"
             className={styles.button}
-            onClick={() => onLeaveFeedback(type)}
-            name={type}
+            onClick={() => onLeaveFeedback(option)}
+            name={option}
           >
-            {type}
+            {option}
           </button>
         );
       })}
